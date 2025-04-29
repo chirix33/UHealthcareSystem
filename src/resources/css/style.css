@@ -1,0 +1,14 @@
+.header {
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+}
+.text-field, .password-field, .button {
+  -fx-border-radius: 3;
+  -fx-background-radius: 3;
+}
+
+.logout-button {
+    -fx-background-color: yellow;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.AddPatientController"
+      spacing="10">
+  <padding>
+    <Insets top="20" right="20" bottom="20" left="20"/>
+  </padding>
+
+  <Label text="Add New Patient" styleClass="header"/>
+
+  <GridPane hgap="10" vgap="10">
+    <!-- Name Fields -->
+    <Label text="First Name:"           GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfFirstName"      GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Middle Name:"          GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfMiddleName"     GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Last Name:"            GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfLastName"       GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <!-- Date & Gender -->
+    <Label text="Date of Birth:"        GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <DatePicker fx:id="dpDOB"           GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label text="Gender:"               GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <ChoiceBox fx:id="cbGender"         GridPane.rowIndex="4" GridPane.columnIndex="1">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Male"/>
+          <String fx:value="Female"/>
+          <String fx:value="Other"/>
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+
+    <!-- Contact Info -->
+    <Label text="Nationality:"          GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfNationality"    GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <Label text="City:"                 GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfCity"           GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <Label text="Country:"              GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfCountry"        GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+    <Label text="Phone Number:"         GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfPhone"          GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+    <Label text="Emergency Phone:"      GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfEmergencyPhone" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+    <!-- Medical Details -->
+    <Label text="Blood Type:"           GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+    <ChoiceBox fx:id="cbBloodType"      GridPane.rowIndex="10" GridPane.columnIndex="1">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="A+"/>
+          <String fx:value="A-"/>
+          <String fx:value="B+"/>
+          <String fx:value="B-"/>
+          <String fx:value="AB+"/>
+          <String fx:value="AB-"/>
+          <String fx:value="O+"/>
+          <String fx:value="O-"/>
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+
+    <Label text="Allergies:"            GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+    <TextArea fx:id="taAllergies" prefRowCount="2"
+              GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+
+    <Label text="Chronic Conditions:"   GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+    <TextArea fx:id="taChronic" prefRowCount="2"
+              GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+
+    <Label text="Current Medications:"  GridPane.rowIndex="13" GridPane.columnIndex="0"/>
+    <TextArea fx:id="taMedications" prefRowCount="2"
+              GridPane.rowIndex="13" GridPane.columnIndex="1"/>
+
+    <!-- Credentials -->
+    <Label text="Email Address:"        GridPane.rowIndex="14" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfEmail"          GridPane.rowIndex="14" GridPane.columnIndex="1"/>
+
+    <Label text="Password:"             GridPane.rowIndex="15" GridPane.columnIndex="0"/>
+    <PasswordField fx:id="pfPassword"   GridPane.rowIndex="15" GridPane.columnIndex="1"/>
+  </GridPane>
+
+  <Button fx:id="onSave" text="Save" onAction="#onSave" maxWidth="Infinity"/>
+</VBox>

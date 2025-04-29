@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.AdminController"
+            stylesheets="@../css/style.css">
+  <top>
+    <ToolBar>
+      <Button text="Add"    onAction="#onAdd"/>
+      <Button text="Edit"   onAction="#onEdit"/>
+      <Button text="Delete" onAction="#onDelete"/>
+      <Button text="Logout" 
+        onAction="#onLogout" 
+        styleClass="logout-button"
+        maxWidth="Infinity"/>
+    </ToolBar>
+  </top>
+  <center>
+    <TableView fx:id="table" prefWidth="600">
+      <columns>
+        <TableColumn fx:id="colEmail"   text="Email"/>
+        <TableColumn fx:id="colName"    text="Name"/>
+        <TableColumn fx:id="colPhone"   text="Phone"/>
+        <TableColumn fx:id="colEmergency" text="Emergency"/>
+        <!-- add other columns -->
+      </columns>
+    </TableView>
+  </center>
+</BorderPane>

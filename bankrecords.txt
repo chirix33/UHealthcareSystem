@@ -1,0 +1,12 @@
+Avg inc. for Females: $28666.98
+Avg inc. for Males: $27225.83
+Num. of Females with Mortgage & Savings Account: 70
+Num. of Inner-City males with car & 1 child: 15
+Num. of Rural males with car & 1 child: 9
+Num. of Suburban males with car & 1 child: 3
+Num. of Town males with car & 1 child: 7
+
+----------------------------------------
+Processed by: Ashraf Abdul-Muumin
+Date/Time: 2025-03-28 01:24:41
+----------------------------------------
