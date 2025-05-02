@@ -6,67 +6,75 @@
 <?import java.lang.String?>
 
 
-<VBox xmlns="http://javafx.com/javafx/17"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controllers.EditPatientController"
-      spacing="10">
-	<padding>
-    	<Insets top="20" right="20" bottom="20" left="20"/>
-  	</padding>
-  <Label text="Edit Patient" styleClass="header"/>
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.EditPatientController"
+            fitToWidth="true"
+            prefViewportHeight="450"
+            prefViewportWidth="800">
 
-  <GridPane hgap="10" vgap="10">
-    <!-- Row 0 -->
-    <Label text="First Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-    <TextField fx:id="tfFirstName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-
-    <!-- Row 1 -->
-    <Label text="Middle Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <TextField fx:id="tfMiddleName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-
-    <!-- Row 2 -->
-    <Label text="Last Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-    <TextField fx:id="tfLastName" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-
-    <!-- Row 3 -->
-    <Label text="Date of Birth:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-    <DatePicker fx:id="dpDOB" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
-
-    <!-- Row 4 -->
-    <Label text="Gender:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-    <ChoiceBox fx:id="cbGender" GridPane.rowIndex="4" GridPane.columnIndex="1">
-      <items>
-        <FXCollections fx:factory="observableArrayList">
-          <String fx:value="Male"/>
-          <String fx:value="Female"/>
-          <String fx:value="Other"/>
-        </FXCollections>
-      </items>
-    </ChoiceBox>
-
-    <!-- Row 5 -->
-    <Label text="Email:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-    <TextField fx:id="tfEmail" GridPane.rowIndex="5" GridPane.columnIndex="1" editable="false"/>
-
-    <!-- Row 6 -->
-    <Label text="Phone:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
-    <TextField fx:id="tfPhone" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
-
-    <!-- Row 7 -->
-    <Label text="Emergency Phone:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
-    <TextField fx:id="tfEmergency" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
-
-    <!-- Row 8 -->
-    <Label text="Country:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
-    <TextField fx:id="tfCountry" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
-
-    <!-- Row 9 -->
-    <Label text="New Password:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
-    <PasswordField fx:id="pfPassword" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
-  </GridPane>
-
-  <Button fx:id="btnUpdate"
-          text="Update"
-          onAction="#onUpdate"
-          maxWidth="Infinity"/>
-</VBox>
+  <content>
+	<VBox xmlns="http://javafx.com/javafx/17"
+	      xmlns:fx="http://javafx.com/fxml/1"
+	      spacing="10">
+		<padding>
+	    	<Insets top="20" right="20" bottom="20" left="20"/>
+	  	</padding>
+	  <Label text="Edit Patient" styleClass="header"/>
+	
+	  <GridPane hgap="10" vgap="10">
+	    <!-- Row 0 -->
+	    <Label text="First Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+	    <TextField fx:id="tfFirstName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+	
+	    <!-- Row 1 -->
+	    <Label text="Middle Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+	    <TextField fx:id="tfMiddleName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+	
+	    <!-- Row 2 -->
+	    <Label text="Last Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+	    <TextField fx:id="tfLastName" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+	
+	    <!-- Row 3 -->
+	    <Label text="Date of Birth:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+	    <DatePicker fx:id="dpDOB" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+	
+	    <!-- Row 4 -->
+	    <Label text="Gender:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+	    <ChoiceBox fx:id="cbGender" GridPane.rowIndex="4" GridPane.columnIndex="1">
+	      <items>
+	        <FXCollections fx:factory="observableArrayList">
+	          <String fx:value="Male"/>
+	          <String fx:value="Female"/>
+	          <String fx:value="Other"/>
+	        </FXCollections>
+	      </items>
+	    </ChoiceBox>
+	
+	    <!-- Row 5 -->
+	    <Label text="Email:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+	    <TextField fx:id="tfEmail" GridPane.rowIndex="5" GridPane.columnIndex="1" editable="false"/>
+	
+	    <!-- Row 6 -->
+	    <Label text="Phone:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+	    <TextField fx:id="tfPhone" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+	
+	    <!-- Row 7 -->
+	    <Label text="Emergency Phone:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+	    <TextField fx:id="tfEmergency" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+	
+	    <!-- Row 8 -->
+	    <Label text="Country:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+	    <TextField fx:id="tfCountry" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+	
+	    <!-- Row 9 -->
+	    <Label text="New Password:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+	    <PasswordField fx:id="pfPassword" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+	  </GridPane>
+	
+	  <Button fx:id="btnUpdate"
+	          text="Update"
+	          onAction="#onUpdate"
+	          maxWidth="Infinity"/>
+	</VBox>
+	</content>
+</ScrollPane>

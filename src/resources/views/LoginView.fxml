@@ -2,17 +2,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="controllers.LoginController"
-            stylesheets="@../css/style.css">
-  <children>
-    <VBox alignment="CENTER" spacing="10" AnchorPane.topAnchor="50" 
-          AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
-      <Label text="Universal Health Information System" styleClass="header"/>
-      <TextField fx:id="txtEmail" promptText="Email" />
-      <PasswordField fx:id="txtPassword" promptText="Password"/>
-      <Button text="Log In" onAction="#onLogin" maxWidth="Infinity"/>
-      <Label fx:id="lblError" textFill="red"/>
-    </VBox>
-  </children>
-</AnchorPane>
+            fitToWidth="true"
+            prefViewportHeight="450"
+            prefViewportWidth="800">
+
+  <content>
+	<AnchorPane xmlns:fx="http://javafx.com/fxml"
+	            stylesheets="@../css/style.css">
+	  <children>
+	    <VBox alignment="CENTER" spacing="10" AnchorPane.topAnchor="50" 
+	          AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+	      <Label text="Universal Health Information System" styleClass="header"/>
+	      <TextField fx:id="txtEmail" promptText="Email" />
+	      <PasswordField fx:id="txtPassword" promptText="Password"/>
+	      <Button text="Log In" onAction="#onLogin" maxWidth="Infinity"/>
+	      <Label fx:id="lblError" textFill="red"/>
+	    </VBox>
+	  </children>
+	</AnchorPane>
+	</content>
+</ScrollPane>
